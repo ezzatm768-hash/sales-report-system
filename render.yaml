@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vs-sales-system
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: NODE_ENV
+        value: production
